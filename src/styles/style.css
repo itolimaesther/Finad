@@ -1,0 +1,132 @@
+/* @font-face {
+    font-family: 'Muli Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Muli Regular'), url('Muli-Regular.woff') format('woff');
+    } */
+
+*{
+    font-family: 'Muli Regular';
+}
+
+.banner{
+    width: 100%;
+    background-color: #f8ede7;
+    height: 650px
+}
+
+.navbar{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.navbar-nav {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.navbar-nav .nav-item .nav-link{
+    color: #1d3a77;
+    letter-spacing: 1px;
+}
+
+.navbar-nav .nav-item .nav-link:hover, .navbar-nav .nav-item .nav-link:focus, .navbar-nav .nav-item .nav-link:active, .active {
+    color: #ff7d44 !important;
+}
+
+.container-wrapper .container{
+    max-width: 100% !important;
+    padding-left: 35px;
+    padding-right: 0px;
+}
+.banner-tittle{
+    font-size: 85px;
+    font-weight: 400;
+    color: #1d3a77;
+}
+
+.slick-prev{
+   left: 1% !important;
+}
+.slick-next{
+    right: 1% !important;
+}
+
+
+.slider-images__1, .slider-images__2, .slider-images__3{
+    width: 33%;
+    /* float: right;
+    margin-right: -20%;
+    height: 553px; */
+    position: relative;
+}
+.row{
+    display:flex;
+}
+
+.slider-description-1, .slider-description-2, .slider-description-3{
+    width: 66%;
+    margin-top: 57px;
+    padding-left: 20px;
+}
+
+.slider-image-1{
+    height: 513px;
+    /* position: relative; */
+    width: 55%;
+    float: right;
+    z-index: 11;
+}
+
+/* .col-8{
+    width: 66% !important;
+}
+
+.col-4{
+    width: 33% !important;
+} */
+
+.slider-image-down, .slider-image-middle, .slider-image-top{
+    width: 100%;
+    height: 100%;
+    
+}
+
+.slider-image-2{
+    height: 446px;
+    width: 30%;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 13.1%;
+}
+
+.slider-image-3{
+    height: 495px;
+    width: 300px;
+    position: absolute;
+    z-index: 20;
+    top: 3.7%;
+    right: 207px;
+
+}
+
+.service-container, .business-container{
+    margin-top: 7%;
+}
+
+.home-service__icon{
+    width: 30%;
+    
+}
+
+.home-service{
+
+}
+
+.icon-title{
+    font-weight: 100;
+    color: #333333;
+}
+

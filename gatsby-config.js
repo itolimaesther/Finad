@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://gatsby-wordpress-website.000webhostapp.com",
     title: "FinAD",
   },
   plugins: [
@@ -23,6 +23,7 @@ module.exports = {
     "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    
     {
       resolve: "gatsby-source-filesystem",
       options: {
