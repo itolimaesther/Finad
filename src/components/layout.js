@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 import { Container, Col, Button, Row } from "react-bootstrap";
-import { Link } from "react-router-dom"
+// import { Link } from "react-router-dom"
 import Header from "./header"
 import { StaticImage } from "gatsby-plugin-image"
 
@@ -212,7 +212,7 @@ const Layout = ({ children }) => {
                     Aenean sollicitudin, quis bibendum lorem
                   </p>
                   <p>© 2021 Copyright
-                    <Link to="">FinAD</Link>
+                    <a href="">FinAD</a>
                   </p>
                 </Col>
                 <Col>
@@ -220,9 +220,14 @@ const Layout = ({ children }) => {
                   <p>
                   Become a part of our business venture or learn more about business success
                   </p>
-                  <Link to="">email@gmail.com</Link>
-                  <Link to="">Call us: +1234 567 890</Link>
-                  <Link to="">Soho Street, London United Kingdom</Link>
+                  <ul>
+                    <li><a href="">email@gmail.com</a></li>
+                    <li><a href="">Call us: +1234 567 890</a></li>
+                    <li><a href="">Soho Street, London United Kingdom</a></li>
+                  </ul>
+                  
+                  
+                  
                 </Col>
                 <Col>
                   <h3>Newsletter</h3>

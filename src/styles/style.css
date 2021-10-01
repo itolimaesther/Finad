@@ -33,6 +33,10 @@ h2, h3{
     text-transform: capitalize; */
 }
 
+li{
+    list-style: none;
+}
+
 .banner{
     width: 100%;
     background-color: #f8ede7;
@@ -157,7 +161,7 @@ h2, h3{
 
 }
 
-.service-container, .business-container{
+.service-container, .business-container, .teams, .business-strategy{
     margin-top: 7%;
 }
 
@@ -175,7 +179,7 @@ h2, h3{
     color: #333333;
 }
 
-.business-col-2 h1{
+.business-col-2 h1, .business-strategy-col-2 h1{
     color: #1d3a77;
     font-size: 65px;
     line-height: 65px;
@@ -211,9 +215,6 @@ h2, h3{
     margin-top: 70px;
 }
 
-/* .row-2 h3{
-    margin-bottom: 10%;
-} */
 
 .CircularProgressbar {
     width: 100% !important;
@@ -261,6 +262,10 @@ h2, h3{
   .accordion-item.collapsed {
     max-height: 0;
     transition: max-height 0.35s cubic-bezier(0, 1, 0, 1);
+  }
+
+  .accordion-list{
+      list-style: none;
   }
 
 footer{

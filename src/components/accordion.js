@@ -21,30 +21,7 @@ function Accordion({title, description}) {
                     <p className="accordion-content">{description}</p>
                     </div>
                 </li>
-                <li className="accordion-list">
-                    <h5 className="accordion-header">
-                    {title}
-                    </h5>
-                    <div className={`accordion-item ${!isOpen ? "collapsed" : ""}`}>
-                    <p className="accordion-content">{description}</p>
-                    </div>
-                </li>
-                <li className="accordion-list">
-                    <h5 className="accordion-header">
-                    {title}
-                    </h5>
-                    <div className={`accordion-item ${!isOpen ? "collapsed" : ""}`}>
-                    <p className="accordion-content">{description}</p>
-                    </div>
-                </li>
-                <li className="accordion-list">
-                    <h5 className="accordion-header">
-                    {title}
-                    </h5>
-                    <div className={`accordion-item ${!isOpen ? "collapsed" : ""}`}>
-                    <p className="accordion-content">{description}</p>
-                    </div>
-                </li>
+                
             </ul>
             
         </div>

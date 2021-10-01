@@ -8,11 +8,11 @@ import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 // import AnimatedProgressProvider from "./AnimatedProgressProvider";
 import ChangingProgressProvider from "../components/ChangingProgressProvider";
 import { Container, Row, Col } from "react-bootstrap";
-import { Link } from "react-router-dom"
+// import { Link } from "react-router-dom";
 import Layout from "../components/layout";
 import { StaticImage } from "gatsby-plugin-image";
 import Seo from "../components/seo";
-import Accordion from "../components/accordion"
+import Accordion from "../components/accordion";
 
 export default function Home() {
 	const percentage = 66;
@@ -154,77 +154,110 @@ export default function Home() {
 							<Col>
 								<StaticImage src="../images/team-1.jpg" />
 								<h4 className="team-name">Maria Weber</h4>
-								<p className="team-phone"></p>
-								<p> <a href="" target="_blank" rel="noopener noreferrer">
-        email@gmail.com
-      </a> </p>
+								<p className="team-phone">+1234 567 890</p>
+								<p>
+									
+									<a href="" target="_blank" rel="noopener noreferrer">
+										email@gmail.com
+									</a>
+								</p>
 							</Col>
 							<Col>
 								<StaticImage src="../images/team-2.jpg" />
-								<h4 className="team-name"></h4>
-								<p className="team-phone"></p>
-								<p> <Link to="email@gmail.com">email@gmail.com</Link> </p>
+								<h4 className="team-name">John Doe</h4>
+								<p className="team-phone">+1234 567 890</p>
+								<p>
+									
+									<a href="email@gmail.com">email@gmail.com</a>
+								</p>
 							</Col>
 							<Col>
 								<StaticImage src="../images/team-3.jpg" />
-								<h4 className="team-name"></h4>
-								<p className="team-phone"></p>
-								<p> <a href="mailto:email@gmail.com" target="_blank" rel="noopener noreferrer">
-        email@gmail.com
-      </a> </p>
+								<h4 className="team-name">John Doe</h4>email@gmail.com
+								<p className="team-phone">+1234 567 890</p>
+								<p>
+									
+									<a
+										href="mailto:email@gmail.com"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										email@gmail.com
+									</a>
+								</p>
 							</Col>
 							<Col>
 								<StaticImage src="../images/team-4.jpg" />
-								<h4 className="team-name"></h4>
-								<p className="team-phone"></p>
-								<p> <a href="mailto:email@gmail.com" target="_blank" rel="noopener noreferrer">
-        email@gmail.com
-      </a> </p>
+								<h4 className="team-name">John Doe</h4>
+								<p className="team-phone">+1234 567 890</p>
+								<p>
+									
+									<a
+										href="mailto:email@gmail.com"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										email@gmail.com
+									</a>
+								</p>
 							</Col>
 							<Col>
 								<StaticImage src="../images/team-5.jpg" />
-								<h4 className="team-name"></h4>
-								<p className="team-phone"></p>
-								<p> <a href="https://example.com" target="_blank" rel="noopener noreferrer">
-        External link
-      </a> </p>
+								<h4 className="team-name">John Doe</h4>
+								<p className="team-phone">+1234 567 890</p>
+								<p>
+									
+									<a
+										href=""
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										email@gmail.com
+									</a>
+								</p>
 							</Col>
-							
 						</Row>
 					</Container>
 				</section>
-											<section className="business-strategy">
-												<Container>
-													<Row>
-														<Col>
-															<StaticImage 
-																src="../images/column-image-1.jpg"
-															/>
-														</Col>
-														<Col>
-															<h1>Business Strategies</h1>
-															<Accordion
-																title="Discover Our Process"
-																description="Lorem ipsum dolor sit amet, ei solum justo aperiam est, eam in nobis placerat. Nec nominavi definitiones et, summo intellegebat an est. At veniam philosophia vix. Ad salutatus prodesset ius, cum at autem idque. Sit ceteros ummo intellegebat an est."
-															/>
+				<section className="business-strategy">
+					<Container>
+						<Row>
+							<Col className="business-strategy-col-1">
+								<StaticImage src="../images/home-image-2.png" />
+							</Col>
+							<Col className="business-strategy-col-2">
+								<h1>Business Strategies</h1>
+								<Accordion
+									title="Discover Our Process"
+									description="Lorem ipsum dolor sit amet, ei solum justo aperiam est, eam in nobis placerat. Nec nominavi definitiones et, summo intellegebat an est. At veniam philosophia vix. Ad salutatus prodesset ius, cum at autem idque. Sit ceteros ummo intellegebat an est."
+								/>
 
-															<Accordion
-																title="About Our Company"
-																description="Lorem ipsum dolor sit amet, ei solum justo aperiam est, eam in nobis placerat. Nec nominavi definitiones et, summo intellegebat an est. At veniam philosophia vix. Ad salutatus prodesset ius, cum at autem idque. Sit ceteros ummo intellegebat an est."
-															/>
+								<Accordion
+									title="About Our Company"
+									description="Lorem ipsum dolor sit amet, ei solum justo aperiam est, eam in nobis placerat. Nec nominavi definitiones et, summo intellegebat an est. At veniam philosophia vix. Ad salutatus prodesset ius, cum at autem idque. Sit ceteros ummo intellegebat an est."
+								/>
 
-															<Accordion
-																title="Mission Statement"
-																description="Lorem ipsum dolor sit amet, ei solum justo aperiam est, eam in nobis placerat. Nec nominavi definitiones et, summo intellegebat an est. At veniam philosophia vix. Ad salutatus prodesset ius, cum at autem idque. Sit ceteros ummo intellegebat an est."
-															/>
-															<Accordion
-																title="Business Consalting"
-																description="Lorem ipsum dolor sit amet, ei solum justo aperiam est, eam in nobis placerat. Nec nominavi definitiones et, summo intellegebat an est. At veniam philosophia vix. Ad salutatus prodesset ius, cum at autem idque. Sit ceteros ummo intellegebat an est."
-															/>
-														</Col>
-													</Row>
-												</Container>
-											</section>
+								<Accordion
+									title="Mission Statement"
+									description="Lorem ipsum dolor sit amet, ei solum justo aperiam est, eam in nobis placerat. Nec nominavi definitiones et, summo intellegebat an est. At veniam philosophia vix. Ad salutatus prodesset ius, cum at autem idque. Sit ceteros ummo intellegebat an est."
+								/>
+								<Accordion
+									title="Business Consalting"
+									description="Lorem ipsum dolor sit amet, ei solum justo aperiam est, eam in nobis placerat. Nec nominavi definitiones et, summo intellegebat an est. At veniam philosophia vix. Ad salutatus prodesset ius, cum at autem idque. Sit ceteros ummo intellegebat an est."
+								/>
+							</Col>
+						</Row>
+					</Container>
+				</section>
+
+				<section className="contact">
+					<Container>
+						<Row>
+							<Col></Col>
+							<Col></Col>
+						</Row>
+					</Container>
+				</section>
 			</Layout>
 		</>
 	);
