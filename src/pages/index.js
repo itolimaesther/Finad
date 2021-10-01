@@ -173,7 +173,7 @@ export default function Home() {
 							</Col>
 							<Col>
 								<StaticImage src="../images/team-3.jpg" />
-								<h4 className="team-name">John Doe</h4>email@gmail.com
+								<h4 className="team-name">John Doe</h4>
 								<p className="team-phone">+1234 567 890</p>
 								<p>
 									
@@ -251,11 +251,8 @@ export default function Home() {
 				</section>
 
 				<section className="contact">
-					<Container>
-						<Row>
-							<Col></Col>
-							<Col></Col>
-						</Row>
+					<Container fluid>
+						<StaticImage src="../images/section-background-image-3.jpg" />
 					</Container>
 				</section>
 			</Layout>

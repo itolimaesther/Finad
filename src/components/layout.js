@@ -198,7 +198,7 @@ const Layout = ({ children }) => {
 
       
 
-      <footer className="mt-5">
+      <footer>
         {/* © {new Date().getFullYear()}, Built with
         {` `}
         <a href="https://www.gatsbyjs.com">Gatsby</a>
@@ -212,7 +212,7 @@ const Layout = ({ children }) => {
                     Aenean sollicitudin, quis bibendum lorem
                   </p>
                   <p>© 2021 Copyright
-                    <a href="">FinAD</a>
+                    <a href=""> FinAD </a>
                   </p>
                 </Col>
                 <Col>
@@ -226,8 +226,6 @@ const Layout = ({ children }) => {
                     <li><a href="">Soho Street, London United Kingdom</a></li>
                   </ul>
                   
-                  
-                  
                 </Col>
                 <Col>
                   <h3>Newsletter</h3>
@@ -235,7 +233,7 @@ const Layout = ({ children }) => {
                   Submit your email address and subscribe to our newsletter to be on the up and up.
                   </p>
                   <form action="">
-                    <input type="text" placeholder="Email"/>
+                    <input type="text" placeholder="Email" className="mt-3"/>
                   </form>
                 </Col>
             </Row>

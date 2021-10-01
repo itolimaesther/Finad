@@ -33,9 +33,19 @@ h2, h3{
     text-transform: capitalize; */
 }
 
+ul{
+    padding: 0px;
+}
+
 li{
     list-style: none;
 }
+
+a{
+    text-decoration: none;
+}
+
+
 
 .banner{
     width: 100%;
@@ -161,7 +171,7 @@ li{
 
 }
 
-.service-container, .business-container, .teams, .business-strategy{
+.service-container, .business-container, .teams, .business-strategy, .contact{
     margin-top: 7%;
 }
 
@@ -221,6 +231,8 @@ li{
     height: 100% !important;
 }
 
+
+
 .accordion-title {
     font-weight: 600;
     cursor: pointer;
@@ -268,6 +280,10 @@ li{
       list-style: none;
   }
 
+  .contact .container-fluid{
+      padding: 0px;
+  }
+
 footer{
     background-color: #002237;
     padding: 100px 50px;
@@ -279,6 +295,24 @@ footer .col h3, footer .col p {
 
 footer .col p{
     font-size: 15px;
+}
+
+footer .col ul li a, footer .col p a {
+    color: #fff;
+}
+
+footer .col ul li a:hover, footer .col p a:hover{
+    color: #ff7d44;
+}
+
+footer .col ul li{
+    line-height: 35px;
+}
+
+footer .col form input{
+    background-color: transparent;
+    padding: 11px 8px;
+    border: 1px solid #fff;
 }
 
 
