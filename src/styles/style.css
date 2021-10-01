@@ -20,6 +20,7 @@ p{
     font-weight: 400;
     letter-spacing: 0px;
     text-transform: none;
+    margin: 0px;
 }
 h2, h3{
     color: #333333;
@@ -110,6 +111,26 @@ h2, h3{
 .col-4{
     width: 33% !important;
 } */
+.slick-prev, .slick-next {
+    font-size: 15px !important;
+  }
+  
+   .slick-prev:before, .slick-next:before  {
+    content: '' !important;
+  }
+
+.slick-prev:before, .slick-next:before {
+    display: none;
+    }
+.next-slick-arrow,
+.prev-slick-arrow {
+  color: #000000;
+  font-size: 48px;
+}
+
+.slick-next:before {
+    content: '&#8592;';
+}
 
 .slider-image-down, .slider-image-middle, .slider-image-top{
     width: 100%;
@@ -176,14 +197,18 @@ h2, h3{
     padding: 40px 100px 80px 120px;
 } 
 
-/* .row-2, .row-3{
+.row-2, .row-3{
     width: 80%;
-} */
+}
 
 .row-2 .col, .row-3 .col{
     width: 174px !important;
     height: 174px !important;
     text-align: center;
+}
+
+.row-3{
+    margin-top: 70px;
 }
 
 /* .row-2 h3{
@@ -194,4 +219,62 @@ h2, h3{
     width: 100% !important;
     height: 100% !important;
 }
+
+.accordion-title {
+    font-weight: 600;
+    cursor: pointer;
+    color: #666;
+    padding: 0.5em 1.5em;
+    border: solid 1px #ccc;
+    border-radius: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .accordion-title::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid currentColor;
+  }
+  .accordion-title:hover,
+  .accordion-title.open {
+    color: black;
+  }
+  .accordion-title.open::after {
+    content: "";
+    border-top: 0;
+    border-bottom: 5px solid;
+  }
+  .accordion-content {
+    padding: 1em 1.5em;
+  }
+
+  .accordion-item {
+    overflow: hidden;
+    transition: max-height 0.3s cubic-bezier(1, 0, 1, 0);
+    height: auto;
+    max-height: 9999px;
+  }
+  .accordion-item.collapsed {
+    max-height: 0;
+    transition: max-height 0.35s cubic-bezier(0, 1, 0, 1);
+  }
+
+footer{
+    background-color: #002237;
+    padding: 100px 50px;
+}
+
+footer .col h3, footer .col p {
+    color: #fff;
+}
+
+footer .col p{
+    font-size: 15px;
+}
+
+
 

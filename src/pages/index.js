@@ -8,9 +8,11 @@ import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 // import AnimatedProgressProvider from "./AnimatedProgressProvider";
 import ChangingProgressProvider from "../components/ChangingProgressProvider";
 import { Container, Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom"
 import Layout from "../components/layout";
 import { StaticImage } from "gatsby-plugin-image";
 import Seo from "../components/seo";
+import Accordion from "../components/accordion"
 
 export default function Home() {
 	const percentage = 66;
@@ -92,12 +94,10 @@ export default function Home() {
 												styles={buildStyles({
 													trailColor: "#ddd",
 													textColor: "gray",
-          											pathColor: "#ff7d44",
+													pathColor: "#ff7d44",
 												})}
-												
 											/>
 											<h3>Management</h3>
-											
 										</Col>
 										<Col>
 											<CircularProgressbar
@@ -107,12 +107,10 @@ export default function Home() {
 												styles={buildStyles({
 													trailColor: "#ddd",
 													textColor: "gray",
-          											pathColor: "#ff7d44",
+													pathColor: "#ff7d44",
 												})}
-												
 											/>
 											<h3>Transformation</h3>
-											
 										</Col>
 									</Row>
 
@@ -125,12 +123,10 @@ export default function Home() {
 												styles={buildStyles({
 													trailColor: "#ddd",
 													textColor: "gray",
-          											pathColor: "#ff7d44",
+													pathColor: "#ff7d44",
 												})}
-												
 											/>
 											<h3>Organisation</h3>
-											
 										</Col>
 										<Col>
 											<CircularProgressbar
@@ -139,10 +135,9 @@ export default function Home() {
 												strokeWidth={1}
 												styles={buildStyles({
 													trailColor: "#ddd",
-													textColor: "black",
-          											pathColor: "#ff7d44",
+													textColor: "gray",
+													pathColor: "#ff7d44",
 												})}
-												
 											/>
 											<h3>Improvement</h3>
 										</Col>
@@ -156,32 +151,80 @@ export default function Home() {
 				<section className="teams">
 					<Container>
 						<Row>
-							<Col label="Custom animation speed">
-								<ChangingProgressProvider values={[0, 20, 40, 60, 80, 100]}>
-									{(percentage) => (
-										<CircularProgressbar
-											value={percentage}
-											text={`${percentage}%`}
-											styles={buildStyles({
-												pathTransitionDuration: 0.15,
-											})}
-										/>
-									)}
-								</ChangingProgressProvider>
+							<Col>
+								<StaticImage src="../images/team-1.jpg" />
+								<h4 className="team-name">Maria Weber</h4>
+								<p className="team-phone"></p>
+								<p> <a href="" target="_blank" rel="noopener noreferrer">
+        email@gmail.com
+      </a> </p>
 							</Col>
-							<Col sm>
-								<CircularProgressbar
-									value={percentage}
-									text={`${percentage}%`}
-								/>
-								;
+							<Col>
+								<StaticImage src="../images/team-2.jpg" />
+								<h4 className="team-name"></h4>
+								<p className="team-phone"></p>
+								<p> <Link to="email@gmail.com">email@gmail.com</Link> </p>
 							</Col>
-							<Col sm>sm=true</Col>
-							<Col sm>sm=true</Col>
-							<Col sm>sm=true</Col>
+							<Col>
+								<StaticImage src="../images/team-3.jpg" />
+								<h4 className="team-name"></h4>
+								<p className="team-phone"></p>
+								<p> <a href="mailto:email@gmail.com" target="_blank" rel="noopener noreferrer">
+        email@gmail.com
+      </a> </p>
+							</Col>
+							<Col>
+								<StaticImage src="../images/team-4.jpg" />
+								<h4 className="team-name"></h4>
+								<p className="team-phone"></p>
+								<p> <a href="mailto:email@gmail.com" target="_blank" rel="noopener noreferrer">
+        email@gmail.com
+      </a> </p>
+							</Col>
+							<Col>
+								<StaticImage src="../images/team-5.jpg" />
+								<h4 className="team-name"></h4>
+								<p className="team-phone"></p>
+								<p> <a href="https://example.com" target="_blank" rel="noopener noreferrer">
+        External link
+      </a> </p>
+							</Col>
+							
 						</Row>
 					</Container>
 				</section>
+											<section className="business-strategy">
+												<Container>
+													<Row>
+														<Col>
+															<StaticImage 
+																src="../images/column-image-1.jpg"
+															/>
+														</Col>
+														<Col>
+															<h1>Business Strategies</h1>
+															<Accordion
+																title="Discover Our Process"
+																description="Lorem ipsum dolor sit amet, ei solum justo aperiam est, eam in nobis placerat. Nec nominavi definitiones et, summo intellegebat an est. At veniam philosophia vix. Ad salutatus prodesset ius, cum at autem idque. Sit ceteros ummo intellegebat an est."
+															/>
+
+															<Accordion
+																title="About Our Company"
+																description="Lorem ipsum dolor sit amet, ei solum justo aperiam est, eam in nobis placerat. Nec nominavi definitiones et, summo intellegebat an est. At veniam philosophia vix. Ad salutatus prodesset ius, cum at autem idque. Sit ceteros ummo intellegebat an est."
+															/>
+
+															<Accordion
+																title="Mission Statement"
+																description="Lorem ipsum dolor sit amet, ei solum justo aperiam est, eam in nobis placerat. Nec nominavi definitiones et, summo intellegebat an est. At veniam philosophia vix. Ad salutatus prodesset ius, cum at autem idque. Sit ceteros ummo intellegebat an est."
+															/>
+															<Accordion
+																title="Business Consalting"
+																description="Lorem ipsum dolor sit amet, ei solum justo aperiam est, eam in nobis placerat. Nec nominavi definitiones et, summo intellegebat an est. At veniam philosophia vix. Ad salutatus prodesset ius, cum at autem idque. Sit ceteros ummo intellegebat an est."
+															/>
+														</Col>
+													</Row>
+												</Container>
+											</section>
 			</Layout>
 		</>
 	);

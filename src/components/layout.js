@@ -2,7 +2,10 @@ import React from "react"
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 import { Container, Col, Button, Row } from "react-bootstrap";
+import { Link } from "react-router-dom"
 import Header from "./header"
 import { StaticImage } from "gatsby-plugin-image"
 
@@ -11,10 +14,16 @@ function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
-      className={className}
+    className={className}
       style={{ ...style, display: "block", background: "red" }}
       onClick={onClick}
-    />
+    > 
+      <FontAwesomeIcon
+                icon={faCoffee}
+                color="#000"
+                size="2x"
+            />
+    </div>
   );
 }
 
@@ -22,10 +31,16 @@ function SamplePrevArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
-      className={className}
+    className={className}
       style={{ ...style, display: "block", background: "green" }}
       onClick={onClick}
-    />
+    >
+        <FontAwesomeIcon
+                icon="arrow-left"
+                color="#000"
+                size="2x"
+            />
+    </div>
   );
 }
 
@@ -38,8 +53,18 @@ const Layout = ({ children }) => {
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 2,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />
+    nextArrow: (
+     
+        <div className="next-slick-arrow"> &#8592;</div>
+      
+    ),
+    prevArrow: (
+      
+        <div className="prev-slick-arrow"> &#8594; </div>
+      
+    )
+    // nextArrow: <SampleNextArrow />,
+    // prevArrow: <SamplePrevArrow />
   };
   //   const menuQuery = useStaticQuery(
 
@@ -174,11 +199,42 @@ const Layout = ({ children }) => {
       
 
       <footer className="mt-5">
-        © {new Date().getFullYear()}, Built with
+        {/* © {new Date().getFullYear()}, Built with
         {` `}
         <a href="https://www.gatsbyjs.com">Gatsby</a>
         {` `}
-        And <a href="https://wordpress.org/">WordPress</a>
+        And <a href="https://wordpress.org/">WordPress</a> */}
+          <Container>
+            <Row>
+                <Col>
+                  <h3>About Company</h3>
+                  <p>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet ffdfd. 
+                    Aenean sollicitudin, quis bibendum lorem
+                  </p>
+                  <p>© 2021 Copyright
+                    <Link to="">FinAD</Link>
+                  </p>
+                </Col>
+                <Col>
+                  <h3>Contact Us</h3>
+                  <p>
+                  Become a part of our business venture or learn more about business success
+                  </p>
+                  <Link to="">email@gmail.com</Link>
+                  <Link to="">Call us: +1234 567 890</Link>
+                  <Link to="">Soho Street, London United Kingdom</Link>
+                </Col>
+                <Col>
+                  <h3>Newsletter</h3>
+                  <p>
+                  Submit your email address and subscribe to our newsletter to be on the up and up.
+                  </p>
+                  <form action="">
+                    <input type="text" placeholder="Email"/>
+                  </form>
+                </Col>
+            </Row>
+          </Container>
       </footer>
     </div>
   )

@@ -2,30 +2,59 @@ import React, { useState, useEffect } from 'react';
 
 
 
-const ChangingProgressProvider = ({ interval = 1000, children, values }) => {
+const ChangingProgressProvider = ({interval= 1000, children, values, text }) => {
 
-const [valuesIndex, setValuesIndex] = useState([])
+const [valuesIndex, setValuesIndex] = useState(0)
 
-let valb = (valuesIndex + 1) % values.length
-
+let intervalId
 useEffect(() => {
-    setInterval(() => {
+    intervalId = setInterval(() => {
         setValuesIndex(
-            {valuesIndex: {valb}}
+            valuesIndex =>(valuesIndex + 1)
           )
-    })
-}, [interval, valb])
+          if(values){
+           clearInterval(intervalId)
+              console.log(values)
+          }
+    }, interval)
 
+}, [interval, values])
 
   return(
-    //   <>
-      
-          children(values, valuesIndex)
-    
-    
+      <>
+          {[valuesIndex]}
+    </>
   ) 
-    
   
 }
 
 export default ChangingProgressProvider;
+
+
+
+
+// import React from "react";
+
+// class ChangingProgressProvider extends React.Component {
+//   static defaultProps = {
+//     interval: 1000
+//   };
+
+//   state = {
+//     valuesIndex: 0
+//   };
+
+//   componentDidMount() {
+//     setInterval(() => {
+//       this.setState({
+//         valuesIndex: (this.state.valuesIndex + 1) % this.props.values.length
+//       });
+//     }, this.props.interval);
+//   }
+
+//   render() {
+//     return this.props.children(this.props.values[this.state.valuesIndex]);
+//   }
+// }
+
+// export default ChangingProgressProvider;
